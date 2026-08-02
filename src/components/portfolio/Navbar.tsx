@@ -59,9 +59,11 @@ export function Navbar({ onOpenResume }: { onOpenResume: () => void }) {
     >
       <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         <a href="#top" className="group flex items-center gap-3">
-          <span className="sketch flex h-11 w-11 items-center justify-center bg-primary font-display text-lg font-bold text-primary-foreground transition-transform group-hover:-rotate-3">
-            DS
-          </span>
+          <img
+            src="./favicon.png"
+            alt="Dheeraj Sankhla logo"
+            className="h-10 w-10 rounded-full border-2 border-primary/80 object-cover shadow-sm transition-transform group-hover:scale-105"
+          />
           <span className="font-display text-xl font-bold text-foreground sm:text-2xl">
             Dheeraj Sankhla
           </span>
