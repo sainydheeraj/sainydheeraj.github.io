@@ -38,11 +38,11 @@ export function About() {
         <div className="grid gap-6 md:grid-cols-2">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
-              <TiltCard intensity={6} className="glass h-full p-6 sm:p-8">
-                <div className="sketch inline-flex h-12 w-12 items-center justify-center bg-secondary">
-                  <p.icon className="h-6 w-6 text-primary-foreground" />
+              <TiltCard intensity={6} className="glass h-full p-6 sm:p-8 border border-border/80">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10">
+                  <p.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="mt-5 text-2xl font-bold text-foreground">{p.title}</h3>
+                <h3 className="mt-5 font-sans text-xl font-bold text-foreground sm:text-2xl">{p.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
               </TiltCard>
             </Reveal>

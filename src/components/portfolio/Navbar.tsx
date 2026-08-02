@@ -85,14 +85,14 @@ export function Navbar({ onOpenResume }: { onOpenResume: () => void }) {
             onClick={toggleTheme}
             aria-label="Toggle Black/Light Mode"
             title={theme === "dark" ? "Switch to Light Mode" : "Switch to Black Mode"}
-            className="sketch ml-2 inline-flex h-10 w-10 items-center justify-center bg-card text-foreground transition-transform hover:scale-105"
+            className="ml-2 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card text-foreground transition-all hover:scale-105 hover:border-primary/50"
           >
-            {theme === "dark" ? <Sun className="h-5 w-5 text-gold" /> : <Moon className="h-5 w-5 text-primary" />}
+            {theme === "dark" ? <Sun className="h-5 w-5 text-amber-400" /> : <Moon className="h-5 w-5 text-primary" />}
           </button>
 
           <button
             onClick={onOpenResume}
-            className="sketch ml-3 inline-flex items-center gap-2 bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="ml-3 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-transform hover:-translate-y-0.5"
           >
             <FileText className="h-4 w-4" />
             View Resume
@@ -104,15 +104,15 @@ export function Navbar({ onOpenResume }: { onOpenResume: () => void }) {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Black/Light Mode"
-            className="sketch inline-flex h-11 w-11 items-center justify-center bg-card text-foreground"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card text-foreground"
           >
-            {theme === "dark" ? <Sun className="h-5 w-5 text-gold" /> : <Moon className="h-5 w-5 text-primary" />}
+            {theme === "dark" ? <Sun className="h-5 w-5 text-amber-400" /> : <Moon className="h-5 w-5 text-primary" />}
           </button>
 
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
-            className="sketch inline-flex h-11 w-11 items-center justify-center bg-card text-foreground"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card text-foreground"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
