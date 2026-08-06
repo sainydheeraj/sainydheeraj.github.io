@@ -51,8 +51,8 @@ export function Projects() {
         />
 
         <Reveal className="mb-10">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="glass -mx-1 flex gap-1.5 overflow-x-auto p-1.5 lg:flex-wrap lg:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-center lg:flex-wrap">
+            <div className="glass -mx-1 flex gap-1.5 overflow-x-auto p-1.5 lg:flex-wrap lg:overflow-visible lg:justify-center [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {categories.map((c) => {
                 const Icon = icons[c.id as keyof typeof icons];
                 const isActive = active === c.id;
@@ -78,7 +78,7 @@ export function Projects() {
               })}
             </div>
 
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center lg:w-auto">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:w-auto">
             <div className="glass flex items-center gap-3 px-4 py-3 lg:w-72">
               <Search className="h-4 w-4 shrink-0 text-primary" />
               <input

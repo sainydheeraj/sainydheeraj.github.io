@@ -38,7 +38,7 @@ export function About() {
         <div className="grid gap-6 md:grid-cols-2">
           {pillars.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
-              <TiltCard intensity={6} className="glass h-full p-6 sm:p-8 border border-border/80">
+              <TiltCard intensity={6} className="glass h-full p-6 sm:p-8 border border-border/80 md:flex md:flex-col md:items-center md:text-center">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/10">
                   <p.icon className="h-6 w-6 text-primary" />
                 </div>

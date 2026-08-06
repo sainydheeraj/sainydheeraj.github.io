@@ -69,7 +69,7 @@ export function Navbar({ onOpenResume }: { onOpenResume: () => void }) {
           </span>
         </a>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 md:flex md:flex-1 md:justify-center">
           {links.map((l) => (
             <a
               key={l.href}

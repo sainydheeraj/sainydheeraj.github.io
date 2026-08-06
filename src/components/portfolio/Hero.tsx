@@ -47,9 +47,9 @@ export function Hero({ onOpenResume }: { onOpenResume: () => void }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl"
+          className="mx-auto flex max-w-4xl flex-col text-left md:items-center md:text-center"
         >
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-400 sm:text-sm">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold text-emerald-400 sm:text-sm md:mx-auto">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-ping opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
@@ -57,20 +57,20 @@ export function Hero({ onOpenResume }: { onOpenResume: () => void }) {
             {personalInfo.availability}
           </div>
 
-          <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight text-foreground sm:text-6xl lg:text-7xl">
+          <h1 className="mt-5 font-display text-4xl font-extrabold leading-tight text-foreground sm:text-6xl lg:text-7xl text-left md:text-center">
             Hi, I&apos;m{" "}
             <span className="text-primary underline decoration-primary/40 underline-offset-8">Dheeraj Sankhla</span>
           </h1>
 
-          <div className="mt-3 min-h-[2em] text-xl font-bold tracking-tight text-secondary sm:text-3xl lg:text-4xl">
+          <div className="mt-3 min-h-[2em] text-xl font-bold tracking-tight text-secondary sm:text-3xl lg:text-4xl text-left md:text-center">
             <Typewriter />
           </div>
 
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg text-left md:mx-auto md:text-center">
             {personalInfo.bio}
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 flex flex-wrap gap-2 justify-start md:justify-center">
             {expertiseBadges.map((b) => (
               <span
                 key={b}
@@ -81,7 +81,7 @@ export function Hero({ onOpenResume }: { onOpenResume: () => void }) {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 justify-start md:justify-center">
             <a
               href="#projects"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0"
@@ -107,7 +107,7 @@ export function Hero({ onOpenResume }: { onOpenResume: () => void }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <TiltCard className="glass flex h-full flex-col justify-between p-5 sm:p-6 border border-border/80">
+              <TiltCard className="glass flex h-full flex-col justify-between p-5 sm:p-6 border border-border/80 md:items-center md:text-center">
                 <Sparkles className="h-5 w-5 text-primary" />
                 <div className="mt-3">
                   <p className="font-sans text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">

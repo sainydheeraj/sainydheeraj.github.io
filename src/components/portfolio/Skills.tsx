@@ -27,15 +27,15 @@ export function Skills() {
             const Icon = iconMap[g.icon as keyof typeof iconMap];
             return (
               <Reveal key={g.title} delay={i * 0.07}>
-                <TiltCard intensity={6} className="glass h-full p-6 sm:p-7">
-                  <div className="flex items-center gap-3">
+                <TiltCard intensity={6} className="glass h-full p-6 sm:p-7 md:flex md:flex-col md:items-center md:text-center">
+                  <div className="flex items-center gap-3 md:justify-center">
                     <span className="sketch inline-flex h-11 w-11 shrink-0 items-center justify-center bg-primary">
                       <Icon className="h-5 w-5 text-primary-foreground" />
                     </span>
                     <h3 className="text-xl font-bold text-foreground">{g.title}</h3>
                   </div>
 
-                  <div className="mt-5">
+                  <div className="mt-5 w-full">
                     <div className="flex items-center justify-between text-xs text-muted-foreground">
                       <span>Proficiency</span>
                       <span className="font-bold text-secondary">{g.level}%</span>
@@ -51,9 +51,9 @@ export function Skills() {
                     </div>
                   </div>
 
-                  <ul className="mt-6 space-y-2.5">
+                  <ul className="mt-6 space-y-2.5 w-full md:flex md:flex-col md:items-center">
                     {g.skills.map((s) => (
-                      <li key={s} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <li key={s} className="flex items-start gap-2.5 text-sm text-muted-foreground md:justify-center">
                         <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                         {s}
                       </li>

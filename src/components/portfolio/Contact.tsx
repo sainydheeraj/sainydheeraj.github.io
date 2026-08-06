@@ -27,27 +27,27 @@ export function Contact() {
 
         <div className="grid gap-5 sm:gap-6 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
-            <div className="glass h-full p-6 sm:p-8">
+            <div className="glass h-full p-6 sm:p-8 md:flex md:flex-col md:items-center md:text-center">
               <h3 className="font-display text-2xl font-bold text-foreground">Direct Contact</h3>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="mt-5 flex items-center gap-3 rounded-2xl border-2 border-border bg-background/50 p-4 transition-colors hover:border-primary/60"
+                className="mt-5 flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-border bg-background/50 p-4 transition-colors hover:border-primary/60"
               >
                 <span className="sketch flex h-10 w-10 shrink-0 items-center justify-center bg-primary">
                   <Mail className="h-5 w-5 text-primary-foreground" />
                 </span>
-                <span className="min-w-0">
+                <span className="min-w-0 text-left md:text-center">
                   <span className="block text-xs text-muted-foreground">Email</span>
                   <span className="block truncate text-sm font-medium text-foreground">
                     {personalInfo.email}
                   </span>
                 </span>
               </a>
-              <div className="mt-3 flex items-center gap-3 rounded-2xl border-2 border-border bg-background/50 p-4">
+              <div className="mt-3 flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-border bg-background/50 p-4">
                 <span className="sketch flex h-10 w-10 shrink-0 items-center justify-center bg-secondary">
                   <MapPin className="h-5 w-5 text-secondary-foreground" />
                 </span>
-                <span>
+                <span className="text-left md:text-center">
                   <span className="block text-xs text-muted-foreground">Location</span>
                   <span className="block text-sm font-medium text-foreground">
                     {personalInfo.location}
@@ -58,7 +58,7 @@ export function Contact() {
               <h4 className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Official Brands & Handles
               </h4>
-              <div className="mt-4 space-y-2.5">
+              <div className="mt-4 w-full space-y-2.5">
                 {brandLinks.map((b) => (
                   <a
                     key={b.href}
@@ -67,7 +67,7 @@ export function Contact() {
                     rel="noreferrer noopener"
                     className="group flex min-h-14 items-center justify-between gap-3 rounded-2xl border-2 border-border bg-background/40 px-4 py-3 transition-all hover:-translate-y-0.5 hover:border-primary/60"
                   >
-                    <span className="min-w-0">
+                    <span className="min-w-0 text-left">
                       <span className="block truncate text-sm font-medium text-foreground">
                         {b.label}
                       </span>
@@ -83,7 +83,7 @@ export function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <form onSubmit={onSubmit} className="glass h-full p-6 sm:p-8">
+            <form onSubmit={onSubmit} className="glass h-full p-6 sm:p-8 md:flex md:flex-col md:items-center md:text-center">
               <h3 className="font-display text-2xl font-bold text-foreground">Send a Message</h3>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div>
