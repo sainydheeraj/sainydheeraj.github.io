@@ -91,6 +91,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           align-items: center;
           text-align: center;
           max-width: 900px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .availability-badge {
